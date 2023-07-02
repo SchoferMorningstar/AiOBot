@@ -49,6 +49,7 @@ async def username(ctx):
 @client.event
 async def on_member_join(member):
     channel = client.get_channel(JOIN_LEAVE_MESSAGE_CHANNEL)
+    await member.send(f"Witaj na serwerze")
     await channel.send(ON_MEMBER_JOIN_MESSAGE)
 
 @client.event
@@ -57,7 +58,7 @@ async def on_member_remove(member):
     await channel.send(ON_MEMBER_LEAVE_MESSAGE)
 
 @client.command()
-async def weather(ctx, city):
+async def weather(ctx, city = "Warszawa"):
     url = f'https://api.openweathermap.org/data/2.5/weather?q={city}&appid={WEATHER_TOKEN}'
     response = requests.get(url)
     data = response.json()
@@ -102,5 +103,11 @@ async def ban(ctx, member:discord.Member, *, reason=None):
 async def ban_error(ctx, error):
     if isinstance(error, commands.MissingPermissions):
         await ctx.send("Nie masz uprawnień do banowania na tym serwerze")
+
+@client.command()
+async def dm(ctx, member:discord.Member, *, message = "Witaj na serwerze"):
+    await member.send(message)
+
+
 
 client.run(TOKEN)
