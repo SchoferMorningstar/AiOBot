@@ -4,6 +4,8 @@ from apikeys import *
 import datetime as dt
 import requests
 import json
+from discord.ext.commands import has_permissions, MissingPermissions
+import os
 
 intents = discord.Intents.all()
 intents.members = True
@@ -57,6 +59,30 @@ async def weather(ctx, city):
     sunset_time = dt.datetime.utcfromtimestamp(data['sys']['sunset'] + data['timezone'])
     wind_speed = data['wind']['speed']
     await ctx.send(f"Weather in {city} \nTemperature: {temp:.2f}°C \nFeels like temperature: {feels_temp:.2f}°C \nHumidity: {humidity}% \nWind speed: {wind_speed}m/s \nGeneral description: {desc} \nSunrise time: {sunrise_time} local time \nSunset time: {sunset_time} local_time")
+
+@client.command()
+@has_permissions(kick_members = True)
+async def kick(ctx, member:discord.Member, *, reason=None):
+    await member.kick(reason=reason)
+    await ctx.send(f'User {member} has been kicked')
+
+@kick.error
+async def kick_error(ctx, error):
+    if isinstance(error, commands.MissingPermissions):
+        await ctx.send("You don't have permissions to kick peoples from this server.")
+
+@client.command()
+@has_permissions(ban_members = True)
+async def ban(ctx, member:discord.Member, *, reason=None):
+    await member.ban(reason=reason)
+    await ctx.send(f'User {member} has been banned')
+
+@kick.error
+async def ban_error(ctx, error):
+    if isinstance(error, commands.MissingPermissions):
+        await ctx.send("You don't have permissions to ban peoples from this server.")
+
+
 
 
 
