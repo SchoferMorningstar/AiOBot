@@ -3,6 +3,8 @@ from discord.ext import commands
 from apikeys import *
 import os
 from tabs import *
+from functions import *
+import asyncio
 
 intents = discord.Intents.all()
 intents.members = True
@@ -18,15 +20,13 @@ async def on_ready():
     print("Hello! I'm AiOBot. I'm now ready for use!")
     print("-----------------------------------------")
 
-initial_extensions = []
+async def load():
+    for filename in os.listdir("./cogs"):
+        if filename.endswith(".py"):
+            await client.load_extension("cogs." + filename[:-3])
 
-for filename in os.listdir("./cogs"):
-    if filename.endswith('.py'):
-        initial_extensions.append("cogs."+filename[:-3])
+async def main():
+    await load()
+    await client.start(TOKEN)
 
-if __name__ == '__main__':
-    for extension in initial_extensions:
-        client.load_extension(extension)
-
-
-client.run(TOKEN)
+asyncio.run(main())
