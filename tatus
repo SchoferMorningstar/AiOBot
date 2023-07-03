@@ -1,0 +1,59 @@
+[33mcommit 3da34007cd2a14f386fd08be7623696cfaa4afeb[m[33m ([m[1;36mHEAD -> [m[1;32mDM_users_and_more[m[33m)[m
+Author: Adam <schoferstd@gmail.com>
+Date:   Mon Jul 3 16:12:20 2023 +0200
+
+    Cogs implement successfull and in adition TicTacToe command (but in TTT "end" word isn't working)
+
+[33mcommit 9442ad5d904fa574edd9ddf18446e2ed5d542d9b[m
+Author: Adam <schoferstd@gmail.com>
+Date:   Sun Jul 2 18:42:25 2023 +0200
+
+    Dont ended cogs inplementing
+
+[33mcommit 0076bdac33144257e6c4282139d90a297f4ef080[m
+Author: Adam <schoferstd@gmail.com>
+Date:   Sun Jul 2 18:21:33 2023 +0200
+
+    DM for users when join and with command
+
+[33mcommit fb7b737c6ea8b2738be166c23ff725f5022c3331[m[33m ([m[1;31morigin/Kick/ban_commands[m[33m, [m[1;32mKick/ban_commands[m[33m)[m
+Author: Adam <schoferstd@gmail.com>
+Date:   Sun Jul 2 16:16:48 2023 +0200
+
+    Kick and ban commands, weather in embed
+
+[33mcommit 9cc38f9fc069bc9fcf4905590319687e85bb1d7f[m
+Author: Adam <schoferstd@gmail.com>
+Date:   Sun Jul 2 15:17:08 2023 +0200
+
+    Kick and ban commands
+
+[33mcommit 72cbc9e2a34518c46eb0de93c085ec59a54764a1[m[33m ([m[1;31morigin/master[m[33m, [m[1;32mmaster[m[33m)[m
+Author: Adam <schoferstd@gmail.com>
+Date:   Sun Jul 2 14:37:26 2023 +0200
+
+    Debuging weather command
+
+[33mcommit 1f0c6604185c625876c621b5d251365b455925f9[m
+Author: Adam <schoferstd@gmail.com>
+Date:   Sun Jul 2 14:21:12 2023 +0200
+
+    Weather in city command
+
+[33mcommit af0d76e19b66043157c8f43381597edc96e72130[m
+Author: Adam <138327764+SchoferMorningstar@users.noreply.github.com>
+Date:   Sun Jul 2 00:20:57 2023 +0200
+
+    Token and channel id delete
+
+[33mcommit a037270b51e897d43c2568b783149579cbf16629[m[33m ([m[1;32mNew_Commands_Adding[m[33m)[m
+Author: Adam <schoferstd@gmail.com>
+Date:   Sun Jul 2 00:06:00 2023 +0200
+
+    Join and leave message system
+
+[33mcommit 9021e3f7a83a5f6d04c3904f05eb9be2969514a7[m
+Author: Adam <schoferstd@gmail.com>
+Date:   Sat Jul 1 23:22:52 2023 +0200
+
+    Setup for Discord Bot
